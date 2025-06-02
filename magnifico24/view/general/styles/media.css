@@ -1,0 +1,83 @@
+@media (max-width: 1024px) {
+    .header__nav-link{
+        font-size: 18px;
+    }
+    
+    .header__button-container {
+        gap: 20px;
+    }
+
+    .main__about-item{
+        gap: 10px 0;
+        padding: 15px;
+    }
+
+    .icon{
+        max-width: 25%;
+    }
+
+    .item-description{
+        font-size: 20px;
+    }
+
+    .section_servises-grid {
+        gap: 20px 0;
+    }
+
+    .title {
+        margin: 50px 0;
+    }
+
+    .section_servises-grid {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content_animation1 {
+        inline-size: 850px;
+        block-size: 300px;
+        background-size: 100%;
+    }
+
+    .content_animation2 {
+        inline-size: 850px;
+        block-size: 300px;
+        background-size: 100%;
+    }
+
+    .content_animation3 {
+        inline-size: 850px;
+        block-size: 300px;
+        background-size: 100%;
+    }
+    
+    .animation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 80px ;
+        background-size: 150%;
+    }
+
+    .anmation_title{
+        bottom: 100px;
+        margin-bottom: 30px;
+        font-size: 50px;
+    }    
+    
+    .description {
+        font-size: 24px;
+        text-align: center;
+    }
+
+
+    .slide__content-image{
+        max-width: 40%;
+    }
+
+}
+
+@media (max-width: 768px) {}

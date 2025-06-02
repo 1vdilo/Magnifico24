@@ -1,0 +1,417 @@
+.catalog-search {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.catalog-search__title {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--color-red);
+    margin-top: 40px;
+}
+
+.catalog-search__items {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.aas {
+    margin-top: 20px;
+}
+
+.catalog-search__filter {
+    width: 60px;
+    border-radius: 100px;
+    background-color: var(--color-light);
+    transition-duration: 0.5s;
+}
+
+.catalog-search__filter:hover {
+    background-color: var(--color-red);
+}
+
+/* Фильтр */
+
+#filter-panel {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    height: 100%;
+    overflow-y: auto;
+    background-image: url(./../../general/images/back_filter.png);
+    border-left: 2px solid var(--color-red);
+    padding: 10px;
+    width: 400px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+
+#filter-panel::-webkit-scrollbar {
+    width: 8px;
+}
+
+#filter-panel::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+#filter-panel::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+#filter-panel.visible {
+    right: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.filter-label {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    gap: 10px 10px;
+}
+
+.filter-title {
+    display: flex;
+    justify-content: center;
+    font-size: 32px;
+    color: var(--color-light);
+    font-weight: 300;
+}
+
+.filter-checkbox {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 21px;
+    height: 21px;
+    border: 2px solid var(--color-red);
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+}
+
+
+.filter-checkbox:checked {
+    background-color: var(--color-red);
+}
+
+
+.filter-checkbox:checked::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 5px;
+    height: 5px;
+    background-color: var(--color-red);
+    border-radius: 5px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+.filter-price {
+    display: flex;
+    flex-direction: column;
+    inline-size: 345px;
+    block-size: 100%;
+    background-color: var(--color-dark-grey);
+    border-radius: 30px;
+    padding: 25px;
+    gap: 10px 0;
+
+    max-height: 300px;
+    overflow-y: auto;
+    margin: 10px 0 0 0;
+}
+
+.filter__label-name {
+    font-size: 20px;
+    color: var(--color-light);
+}
+
+/* Общий стиль для скроллбара */
+.filter-price {
+    position: relative;
+}
+
+/* Скроллбар */
+.filter-price::-webkit-scrollbar {
+    width: 6px;
+    height: 8px;
+}
+
+/* Ползунок скроллбара */
+.filter-price::-webkit-scrollbar-thumb {
+    background-color: var(--color-red);
+    border-radius: 10px;
+    margin: 0 2px;
+}
+
+/* Дорожка скроллбара */
+.filter-price::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+/* цена */
+
+.wrapper {
+    width: 100%;
+    border-radius: 25px;
+}
+
+.price-input {
+    width: 100%;
+    display: flex;
+    margin: 10px 0 20px;
+}
+
+.price-input .field {
+    display: flex;
+    width: 100%;
+    height: 45px;
+    align-items: center;
+}
+
+.field input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 22px;
+    text-align: center;
+    border: 2px solid var(--color-dark);
+    -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.price-input .separator {
+    color: var(--color-light);
+    width: 130px;
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider {
+    height: 5px;
+    position: relative;
+    background: var(--color-light-grey);
+    border-radius: 5px;
+}
+
+.slider .progress {
+    height: 100%;
+    left: 0%;
+    right: 0%;
+    position: absolute;
+    border-radius: 5px;
+    background: var(--color-red);
+}
+
+.range-input {
+    position: relative;
+}
+
+.range-input input {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    top: -6px;
+    background: none;
+    pointer-events: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    height: 17px;
+    width: 17px;
+    border-radius: 50%;
+    background: var(--color-red);
+    pointer-events: auto;
+    -webkit-appearance: none;
+}
+
+/* цена */
+
+.catalog-search__form {
+    display: flex;
+    align-items: center;
+}
+
+.catalog-search__input-wrapper {
+    position: relative;
+    flex: 1;
+}
+
+.catalog-search__input {
+    font-size: 14px;
+    padding: 19px;
+    padding-right: 50px;
+    border-radius: 40px;
+    border: none;
+    width: 100%;
+}
+
+.catalog-search__submit {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.catalog-search__submit-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.catalog-search__input {
+    font-size: 14px;
+    inline-size: 500px;
+    padding: 19px;
+    border-radius: 40px;
+    border: none;
+}
+
+.product-catalog {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+    /* Меняет размер колонок в зависимости от ширины */
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.product-catalog__item {
+    position: relative;
+    background-color: var(--color-dark-grey);
+    border-radius: 40px;
+    padding: 17px;
+}
+
+.product-catalog__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-catalog__image {
+    width: 100%;
+    height: auto;
+    border-radius: 35px;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+    height: 200px;
+}
+
+.product-catalog__item:hover .product-catalog__image {
+    transform: scale(1.15);
+}
+
+.product-catalog__text {
+    font-size: 16px;
+    color: var(--color-light);
+    flex-grow: 1;
+}
+
+.product-catalog__divider {
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-light-grey);
+}
+
+.product-catalog__bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-catalog__price {
+    display: flex;
+}
+
+.product-catalog__price-value {
+    color: var(--color-red);
+    font-size: 24px;
+}
+
+.product-catalog__price-currency {
+    color: var(--color-red);
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.product-catalog__button {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    padding: 11px 31px;
+    border-radius: 22.5px;
+    border: none;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 300;
+    display: inline-flex;
+    align-items: center;
+}
+
+.product-catalog__button:hover {
+    background-color: var(--color-red);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    color: var(--color-light);
+}
+
+.filter-toggle-button {
+    background-color: var(--color-red);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+    #filter-panel {
+        width: 100%;
+    }
+
+    .filter-price {
+        inline-size: 100%;
+    }
+
+    .filter-toggle-button {
+        position: sticky;
+        top: 0;
+        z-index: 1001;
+    }
+}

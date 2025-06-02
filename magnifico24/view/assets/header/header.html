@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/view/general/styles/normolize.css">
+    <link rel="stylesheet" href="/view/assets/header/header.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <a class="header__logo logo" href="/">
+                    <img src="/view/general/icons/logo.svg" alt="Магнифико логотип" width="264" height="60"
+                        loading="lazy">
+                </a>
+                <p class="header__working-time">Пн-пт с 09:00 до 19:00</p>
+                <div class="header__button-container">
+                    <a class="header__button" href="/profile">Личный кабинет</a>
+                    <a class="header__button" href="/basket">Корзина</a>
+                </div>
+                <div class="header__burger"> <!-- Burger icon added -->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="header__nav-wrapper">
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item"><a class="header__nav-link" href="/categories">Каталог</a></li>
+                        <li class="header__nav-item"><a class="header__nav-link" href="/usl">Услуги</a></li>
+                        <li class="header__nav-item"><a class="header__nav-link" href="/#section1">Наши работы</a></li>
+                        <li class="header__nav-item"><a class="header__nav-link" href="/#section3">Контакты</a></li>
+                        <li class="header__nav-item"><a class="header__nav-link" href="/reviews">Отзывы</a></li>
+                    </ul>
+                    <div class="header__mobile-buttons">
+                        <a class="header__button" href="/profile">Личный кабинет</a>
+                        <a class="header__button" href="/basket">Корзина</a>
+                    </div>
+                </nav>
+            </div>
+            
+        </div>
+    </header>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const burger = document.querySelector('.header__burger');
+            const navWrapper = document.querySelector('.header__nav-wrapper');
+
+            burger.addEventListener('click', function () {
+                burger.classList.toggle('active');
+                navWrapper.classList.toggle('active');
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(101762551, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/101762551" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->

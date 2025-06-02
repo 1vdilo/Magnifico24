@@ -1,0 +1,249 @@
+
+
+:root {
+	--color-dark: #0D0D0D;
+	--color-light: #FFFFFF;
+	--color-red: #D80147;
+	--color-dark-grey: #1F1F1F;
+	--color-light-grey: #696969;
+
+	--font-family-base: 'Onest', sans-serif;
+	--font-family-accent: 'Panton', sans-serif;
+
+	--h1: font-size: 72px;
+	--h2: font-size: 60px;
+	--h3: font-size: 48px;
+	--h4: font-size: 36px;
+	--h5: font-size: 24px;
+	--h6: font-size: 18px;
+
+	--border-radius: 30px;
+	--border: 2px solid var(--color-light);
+	--container-width: 1300px;
+	--container-padding-x: 15px;
+	--transition-duration: 0.3s;
+}
+
+main {
+	margin: 50px 0;
+}
+
+tr,
+td {
+	color: var(--color-light);
+}
+
+.wrapper {
+	display: flex;
+	gap: 20px;
+}
+
+.main_nav {
+	background-color: var(--color-dark-grey);
+	inline-size: 270px;
+	padding: 20px;
+	border-radius: 30px;
+}
+
+.main_nav-container {
+	display: flex;
+	flex-direction: column;
+	gap: 20px 0;
+}
+
+.main_profile {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+
+.main_nav-item {
+	display: flex;
+	gap: 0 20px;
+}
+
+.line {
+	flex-grow: 1;
+	background-color: var(--color-light);
+	height: 2px;
+	width: 100%;
+}
+
+.nav_button-exit {
+	margin-top: 40px;
+	border-radius: var(--border-radius);
+	background-color: var(--color-red);
+	color: var(--color-light);
+	border: none;
+	padding: 5px;
+	cursor: pointer;
+	inline-size: 200px;
+}
+
+.button-form {
+	display: flex;
+	justify-content: center;
+}
+
+.nav_button-exit:hover {
+	background-color: #f73777;
+}
+
+
+.main_profile-container,
+.main_order-container {
+	background-color: var(--color-dark-grey);
+	padding: 20px;
+	border-radius: 30px;
+}
+
+.main_profile-container {
+	display: flex;
+	gap: 0 30px;
+}
+
+.profile-fio {
+	color: var(--color-light);
+}
+
+.profile_conform-item {
+	display: flex;
+	gap: 0 40px;
+	color: var(--color-light);
+}
+
+.con {
+	display: flex;
+	gap: 20px;
+}
+
+
+
+.main_order-container {
+	font-family: var(--font-family-base);
+	color: var(--color-light);
+	padding: 20px;
+}
+
+.order-title {
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+.order-item {
+	background-color: var(--color-dark-grey);
+	border-radius: var(--border-radius);
+	margin-bottom: 20px;
+	overflow: hidden;
+	transition: box-shadow 0.3s ease;
+}
+
+.order-item:hover {
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.order-item:not(:last-child) {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+
+.order-summary {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px;
+}
+
+.order-number,
+.order-cost,
+.order-date {
+	font-size: 16px;
+}
+
+.order-status {
+	display: flex;
+	align-items: center;
+	font-size: 16px;
+}
+
+.status-indicator {
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	margin-right: 5px;
+}
+
+/* .order-status.accepted .status-indicator {
+	background-color: green;
+} */
+
+.details-button {
+	background-color: transparent;
+	color: var(--color-light);
+	border: none;
+	cursor: pointer;
+	font-size: 16px;
+	padding: 5px 10px;
+	border-radius: var(--border-radius);
+	transition: background-color 0.3s ease;
+}
+
+.details-button:hover {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.details-button .arrow-down {
+	display: inline-block;
+	transition: transform var(--transition-duration) ease-in-out;
+}
+
+.details-button.open .arrow-down {
+	transform: rotate(180deg);
+}
+
+.order-details {
+	padding: 15px;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height var(--transition-duration) ease-in-out, padding var(--transition-duration) ease-in-out;
+}
+
+.order-details table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 15px;
+}
+.order-details th,
+.order-details td {
+	padding: 8px;
+	text-align: left;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.order-details th {
+	font-weight: bold;
+}
+
+.hidden {
+	max-height: 0;
+	padding: 0 15px;
+}
+
+.arrow-down::after {
+	content: "▼";
+	margin-left: 5px;
+}
+
+.arrow-up::after {
+	content: "▲";
+	margin-left: 5px;
+}
+
+.hide-button-container {
+	display: flex;
+	justify-content: flex-end;
+}

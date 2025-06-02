@@ -1,0 +1,55 @@
+.main {
+    margin: 40px 0;
+}
+
+.policy-section {
+    background-color: var(--color-dark-grey);
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.policy-section h2 {
+    color: var(--color-red);
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--color-red);
+    padding-bottom: 10px;
+    font-family: var(--font-family-accent);
+}
+
+.policy-section p,
+.policy-section ul {
+    color: var(--color-light-grey);
+    margin-bottom: 15px;
+}
+
+.policy-section ul {
+    padding-left: 20px;
+}
+
+.policy-section li {
+    margin-bottom: 8px;
+}
+
+a {
+    color: var(--color-red);
+    text-decoration: none;
+    transition: color var(--transition-duration);
+}
+
+a:hover {
+    color: #b8003a;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .policy-section {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,196 @@
+body {
+    font-family: var(--font-family-base);
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.header {
+    position: relative; /* Add this line */
+    background-color: var(--color-dark-grey);
+    padding-top: 23px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__working-time {
+    font-size: 16px;
+    color: var(--color-light-grey);
+}
+
+.header__button-container {
+    display: flex;
+    gap: 30px;
+}
+
+.header__button {
+    background-color: var(--color-light);
+    padding: 11px 21px;
+    color: var(--color-dark-grey);
+    border-radius: var(--border-radius);
+    border: none;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 300;
+    display: inline-flex;
+    align-items: center;
+}
+
+.header__button:hover {
+    color: var(--color-light);
+    background-color: var(--color-red);
+    letter-spacing: 0.3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.header__nav {
+    margin-top: 20px;
+}
+
+.header__nav-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__nav-item {
+
+}
+
+.header__nav-link {
+    padding: 0 0 14px 0;
+    display: inline-flex;
+    align-items: center;
+    column-gap: 7px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 14px;
+    transition: color var(--transition-duration), letter-spacing var(--transition-duration);
+}
+
+.header__nav-link:hover {
+    color: var(--color-red);
+}
+
+.divider {
+    height: 2px;
+    background-color: var(--color-light-grey);
+    margin: 20px 0;
+}
+
+/* Styles for the burger menu */
+.header__burger {
+    display: none; /* Hidden by default */
+    cursor: pointer;
+    padding: 10px;
+}
+
+.header__burger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-light);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.header__nav-wrapper {
+    /* Style as needed for the menu when it's open */
+}
+
+/* Media query for screens smaller than 1025px */
+@media (max-width: 1024px) {
+    .header-top {
+        flex-wrap: wrap; /* Allow items to wrap */
+    }
+
+    .header__logo {
+        flex-basis: 100%; /* Take full width */
+        text-align: center; /* Center the logo */
+        margin-bottom: 10px; /* Add some space below the logo */
+    }
+
+    .header__working-time,
+    .header__button-container {
+        display: none; /* Hide these elements */
+    }
+
+    .header__burger {
+        display: block; /* Show the burger icon */
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .header__nav-wrapper {
+        display: none; /* Hide the navigation wrapper */
+        width: 100%; /* Ensure full width */
+        background-color: var(--color-dark-grey);
+        position: absolute;
+        top: 100%; /* Position it directly below the header */
+        left: 0;
+        z-index: 300; /* Ensure it's on top of other elements */
+    }
+
+    .header__nav-list {
+        flex-direction: column; /* Stack the navigation items */
+        align-items: center;
+    }
+
+    .header__nav-item {
+        margin: 10px 0;
+    }
+
+    .header__nav-link {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .divider {
+        display: none; /* Hide the divider */
+    }
+}
+
+/* Additional class for when the menu is active */
+.header__nav-wrapper.active {
+    display: block; /* Show the navigation wrapper */
+}
+
+/* Burger menu animation when active */
+.header__burger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.header__burger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.header__burger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -8px);
+}
+
+.header__mobile-buttons {
+    display: none; /* По умолчанию скрыты на десктопе */
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+@media (max-width: 1024px) {
+    .header__button-container {
+        display: none; /* Скрываем старые кнопки */
+    }
+
+    .header__mobile-buttons {
+        display: flex; /* Показываем внутри бургера */
+    }
+
+    .header__mobile-buttons .header__button {
+        width: 80%;
+        justify-content: center;
+    }
+}

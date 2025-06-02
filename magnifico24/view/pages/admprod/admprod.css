@@ -1,0 +1,50 @@
+h2 {
+    text-align: center;
+    color: #ffffff;
+}
+
+.table-container {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+    gap: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+th {
+    background-color: #e7e7e7;
+}
+input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+}
+
+
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+

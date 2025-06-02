@@ -1,0 +1,176 @@
+
+.main__header {
+	font-size: 31px;
+	color: #fff;
+	padding-bottom: 5px;
+	margin: 20px 0;
+}
+
+.main-wrapper {
+	display: flex;
+	flex-direction: row;
+	column-gap: 10px;
+}
+
+.main__content {
+	inline-size: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	column-gap: 114px;
+}
+
+/* Стили для таблицы */
+.main__panel {
+	border-radius: 8px;
+	overflow-y: scroll;
+	scrollbar-width: none;
+	border: 1px solid beige;
+}
+
+th {
+	border-bottom: 2px solid #ddd;
+	border-top: 2px solid #ddd;  
+	text-align: left;
+	}
+	
+	td {
+	border-bottom: 1px solid #ddd; /* Линия снизу каждой ячейки */
+	text-align: left;
+	}
+	
+	table {
+	border-collapse: collapse; /* Объединяем границы ячеек */
+	}
+	
+	.panel-table td {
+	padding: 5px; /* Уменьшаем внутренние отступы */
+	font-size: 16px; /* Уменьшаем размер шрифта */
+	}
+
+	.panel-table td {
+	word-break: break-word; /* Перенос длинных слов */
+	white-space: normal;   /* Автоматический перенос текста */
+	}
+
+.panel-table {
+	width: 100%;
+	border-collapse: collapse;
+	text-align: center;
+	color: #fff;
+	font-size: 16px;
+	background-color: #3c4242;
+}
+
+.save-button {
+	inline-size: 323px;
+	min-block-size: 55px;
+	color: #fff;
+	background-color: #2e2d2d;
+	align-self: flex-end;
+	border: 1px solid #2e2d2d;
+	border-radius: 8px;
+	font-size: 20px;
+}
+
+.table__header-row {
+	background-color: #2e2d2d;
+	color: #fff;
+	font-size: 18px;
+}
+
+td {
+	block-size: 99px;
+}
+
+.panel-table img {
+	display: block;
+	inline-size: 100px;
+	block-size: 100px;
+	border: 1px solid #2e2d2d;
+	margin: 0 auto;
+}
+
+/* СТИЛИ КАРТОЧКИ ДОБАВЛЕНИЯ ТОВАРА */
+.panel-form {
+	display: flex;
+	flex-direction: column;
+	/* block-size: 657px; */
+	block-size: 100%;
+	/* inline-size: 400px; */
+
+	padding: 24px 32px 12px 32px;
+	border: 1px solid #2e2d2d;
+	border-radius: 8px;
+	color: #3c4242;
+}
+
+.delete-button{
+	font-size: 20px;
+	border: none;
+	color: red;
+	background-color: #000000;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.delete-button:hover{
+	background-color: #2d2d2d;
+
+}
+
+.update-button{
+	font-size: 20px;
+	border: none;
+	color: green;
+	background-color: #000000;
+	border-radius: 5px;
+	padding: 9px 5px;
+}
+
+
+.update-button:hover{
+	color: green;
+	background-color: #2d2d2d;
+
+}
+
+label {
+	font-size: 22px;
+}
+
+input {
+	inline-size: 384px;
+	block-size: 58px;
+	font-size: 22px;
+	margin: 0 0 12px 0;
+}
+.product-category, .product-size {
+	font-size: 22px;
+			padding: 8px 12px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			background-color: white;
+			width: 100%;
+			box-sizing: border-box; 
+			-moz-appearance: none;
+			-webkit-appearance: none; 
+			appearance: none;
+}
+
+
+.form__add-button {
+	inline-size: 386px;
+	block-size: 55px;
+	color: #fff;
+	background-color: #2e2d2d;
+	text-align: center;
+	padding: 15px 80px;
+	font-size: 20px;
+	border: 1px solid #2e2d2d;
+	border-radius: 8px;
+}
+
+.button:hover {
+	background-color: #3c4242;
+}

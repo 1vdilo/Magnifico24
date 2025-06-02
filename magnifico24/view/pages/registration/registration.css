@@ -1,0 +1,130 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  padding: 20px;
+}
+
+.forms-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.form-wrapper {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+  padding: 30px;
+  border-radius: var(--border-radius);
+  background: rgba(34, 34, 34, 0.8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-title {
+  font-size: 1.5em;
+  text-align: center;
+  color: var(--color-light);
+  margin-bottom: 10px;
+}
+
+.field {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  font-size: 0.8em;
+  border: none;
+  border-radius: var(--border-radius);
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  box-sizing: border-box;
+}
+
+.password {
+  width: 100%;
+  padding: 10px;
+  font-size: 0.8em;
+  border: none;
+  border-radius: var(--border-radius);
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  box-sizing: border-box;
+}
+
+.input:focus {
+  outline: none;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+/* Стили для иконок показа пароля */
+.eye-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 1.2em;
+  color: #8b8b8b;
+  cursor: pointer;
+}
+
+.form-link {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.form-link span,
+.form-link a {
+  font-size: 0.9em;
+  color: var(--color-light);
+  text-decoration: none;
+}
+
+.form-link a:hover {
+  text-decoration: underline;
+  color: var(--color-red);
+}
+
+.button-field button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  color: var(--color-light);
+  background-color: var(--color-red);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+
+@media (max-width: 768px) {
+  .forms-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-wrapper {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+.hidden {
+  display: none;
+}

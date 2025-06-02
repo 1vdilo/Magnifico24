@@ -1,0 +1,202 @@
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    font-size: 24px;
+    color: #fff;
+    background: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.back-to-top:hover {
+    background: #333;
+    text-decoration: none;
+}
+
+.services {
+    padding: 50px 0;
+}
+
+.services__title {
+    font-family: var(--font-family-accent);
+    font-size: 3rem;
+    color: var(--color-light);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.services__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background-color: var(--color-dark-grey);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    transition: transform var(--transition-duration);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    /* Enable flexbox */
+    justify-content: space-between;
+    /* Distribute space evenly */
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card__title {
+    font-family: var(--font-family-accent);
+    font-size: 1.5rem;
+    color: var(--color-light);
+    margin-bottom: 10px;
+}
+
+.service-card__description {
+    font-family: var(--font-family-base);
+    color: var(--color-light-grey);
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.service-card__link {
+    display: inline-block;
+    font-family: var(--font-family-base);
+    color: var(--color-red);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-red);
+    transition: color var(--transition-duration);
+}
+
+.service-card__link:hover {
+    color: var(--color-light);
+}
+
+.container {
+    max-width: var(--container-width);
+    padding-left: var(--container-padding-x);
+    padding-right: var(--container-padding-x);
+    margin: 0 auto;
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-family: var(--font-family-base);
+}
+
+.modal-content {
+    position: relative;
+    background-color: var(--color-dark);
+    margin: 15% auto;
+    padding: 20px;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+.close-button {
+    color: var(--color-light);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: var(--color-red);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    color: var(--color-light);
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: var(--font-family-accent);
+}
+
+#modalForm {
+    padding: 20px;
+}
+
+#modalForm label {
+    display: block;
+    margin-top: 10px;
+    color: var(--color-light-grey);
+}
+
+#modalForm input[type="text"],
+#modalForm input[type="tel"],
+#modalForm select,
+#modalForm textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid var(--color-dark-grey);
+    border-radius: 8px;
+    background-color: var(--color-dark-grey);
+    color: var(--color-light);
+    box-sizing: border-box;
+    font-family: var(--font-family-base);
+}
+
+#modalForm textarea {
+    resize: vertical;
+}
+
+/* Кнопка отправки */
+#modalForm button[type="submit"] {
+    background-color: var(--color-red);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 16px;
+    font-family: var(--font-family-accent);
+    transition: background-color var(--transition-duration);
+}
+
+#modalForm button[type="submit"]:hover {
+    background-color: darken(--color-red, 10%);
+}
+
+@media screen and (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        margin: 20% auto;
+    }
+}
